@@ -1,16 +1,47 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;700&display=swap');
 
+body {
+  background: #f2f2f2;
+  color: #000;
+  font-family: 'Saira', sans-serif;
+}
 a {
-  color: inherit;
+  color: #000;
   text-decoration: none;
 }
+.content {
+  max-width: auto;
+  margin: auto 1rem;
+}
+nav {
+  margin: 1rem 2rem;
+  /* padding: 10px 0; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a,
+button {
+  margin-left: 2rem;
+}
+nav .logo {
+  margin-right: auto;
+  cursor: pointer;
+}
+footer {
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  color: #777;
+}
 
-* {
-  box-sizing: border-box;
+.not-found {
+  margin: 10rem auto;
+  text-align: center;
+}
+
+.not-found a {
+  color: blueviolet;
+  text-decoration: underline;
 }

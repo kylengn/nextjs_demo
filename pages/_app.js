@@ -6,11 +6,11 @@ function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
-MyApp.getStaticProps = async (appContext) => {
-  // calls page's `getStaticProps` and fills `appProps.pageProps`
-  const appProps = await App.getStaticProps(appContext);
+// MyApp.getStaticProps = async (appContext) => {
+//   // calls page's `getStaticProps` and fills `appProps.pageProps`
+//   const appProps = await App.getStaticProps(appContext);
 
-  return { ...appProps };
-};
+//   return { ...appProps };
+// };
 
 export default MyApp;

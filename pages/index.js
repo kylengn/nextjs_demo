@@ -5,6 +5,7 @@ import GamePlay from '../components/GamePlay';
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/Layout';
+import Script from 'next/script';
 
 export default function Home({ users }) {
   return (
@@ -16,6 +17,15 @@ export default function Home({ users }) {
       <Layout>
         <Header />
         <GamePlay users={users} />
+        <Script>
+          {`const btn = document.querySelector('.menu');
+            const sidebar = document.querySelector('.sidebar');
+
+            btn.addEventListener('click', () => {
+              sidebar.classList.toggle('-translate-x-full');
+            });
+          `}
+        </Script>
       </Layout>
     </>
   );

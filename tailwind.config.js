@@ -13,9 +13,6 @@ module.exports = {
       fontFamily: {
         body: ['Saira'],
       },
-      backgroundImage: {
-        banner: "url('https://cdn.wallpapersafari.com/11/43/EXVgK1.png')",
-      },
     },
   },
   variants: {

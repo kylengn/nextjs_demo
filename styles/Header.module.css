@@ -1,0 +1,13 @@
+.banner {
+  position: absolute;
+  background-image: url('https://www.tynker.com/projects/screenshot/5d63f5b070b00239617712d5/t-rex-game.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+  height: 90vh;
+}

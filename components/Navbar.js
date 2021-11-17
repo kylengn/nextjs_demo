@@ -6,18 +6,24 @@ import Logo from '../public/logo.png';
 
 const Navbar = () => {
   return (
-    <nav className='nav-desktop'>
-      <div className='mx-auto'>
-        <Image src={Logo} width={128} height={128} alt='logo' />
+    <nav className='mt-6 flex justify-around items-center'>
+      <div className=''>
+        <Image src={Logo} width={64} height={64} alt='logo' />
       </div>
       <Link href='https://bscscan.com/token/0x04260673729c5f2b9894a467736f3d85f8d34fc8'>
-        <a>Contract Address</a>
+        <a className='btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300'>
+          Contract Address
+        </a>
       </Link>
       <Link href='https://whitepaper.cryptoplanes.me/'>
-        <a>Whitepaper</a>
+        <a className='btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50  transition ease-out duration-300'>
+          Whitepaper
+        </a>
       </Link>
       <Link href='/play'>
-        <button className='shadow-2xl'>Play Now</button>
+        <button className='btn text-primary border-primary border-2 hover:bg-primary hover:text-white transition ease-in-out duration-500 ml-2'>
+          Play Now
+        </button>
       </Link>
     </nav>
   );

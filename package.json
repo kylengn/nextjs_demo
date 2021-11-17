@@ -2,10 +2,11 @@
   "name": "nextjs_demo",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev && tailwindcss build styles/index.css -o styles/globals.css",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-css": "tailwindcss build styles/index.css -o styles/globals.css"
   },
   "dependencies": {
     "next": "12.0.3",

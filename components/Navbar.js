@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* mobile menu */}
         <div className=''>
           <div></div>
-          <button className='p-4 menu'>
+          <button className='p-4' id='menu'>
             <svg
               className='w-8 h-8 text-secondary-200'
               fill='none'
@@ -56,7 +56,10 @@ const Navbar = () => {
         </div>
 
         {/* sidebar */}
-        <div className='bg-green-600 text-secondary-100 w-64 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out sidebar'>
+        <div
+          className='bg-green-600 text-secondary-100 w-64 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out'
+          id='sidebar'
+        >
           <div className='flex justify-center my-6'>
             <Image src={Logo} width={64} height={64} alt='logo' />
           </div>

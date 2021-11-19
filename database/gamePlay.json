@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Training",
+      "url": "https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04",
+      "imageName": "1-04.png"
+    },
+    {
+      "id": 2,
+      "title": "PvC",
+      "url": "https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04",
+      "imageName": "1-07.png"
+    },
+    {
+      "id": 3,
+      "title": "PvP",
+      "url": "https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04",
+      "imageName": "1-08.png"
+    },
+    {
+      "id": 4,
+      "title": "Marketplace",
+      "url": "https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04",
+      "imageName": "1-07.png"
+    },
+    {
+      "id": 5,
+      "title": "Breeding",
+      "url": "https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04",
+      "imageName": "1-04.png"
+    },
+    {
+      "id": 6,
+      "title": "Upgrade",
+      "url": "https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04",
+      "imageName": "1-08.png"
+    }
+]

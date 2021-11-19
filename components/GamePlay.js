@@ -30,7 +30,7 @@ function GamePlay({ data }) {
             <div
               key={item.id}
               className={styles.card}
-              style={{ backgroundImage: `url(${item.url})` }}
+              style={{ backgroundImage: `url(/assets/${item.imageName})` }}
             >
               <h2>{item.title}</h2>
             </div>

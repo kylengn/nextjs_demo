@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.css';
 import Layout from '../components/Layout';
 import Script from 'next/script';
 import Nft from '../components/Nft';
+import gamePlayModel from '../database/gamePlay';
 
 export default function Home({ data, nft }) {
   return (
@@ -48,39 +49,39 @@ export async function getStaticProps() {
 async function getData() {
   // const res = await fetch('https://jsonplaceholder.typicode.com/users');
   // const users = await res.json();
-
-  const data = [
-    {
-      id: 1,
-      title: 'Training',
-      url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
-    },
-    {
-      id: 2,
-      title: 'PvC',
-      url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
-    },
-    {
-      id: 3,
-      title: 'PvP',
-      url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
-    },
-    {
-      id: 4,
-      title: 'Marketplace',
-      url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
-    },
-    {
-      id: 5,
-      title: 'Breeding',
-      url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
-    },
-    {
-      id: 6,
-      title: 'Upgrade',
-      url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
-    },
-  ];
+  // const data = [
+  //   {
+  //     id: 1,
+  //     title: 'Training 2',
+  //     url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'PvC',
+  //     url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'PvP',
+  //     url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
+  //   },
+  //   {
+  //     id: 4,
+  //     title: 'Marketplace',
+  //     url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
+  //   },
+  //   {
+  //     id: 5,
+  //     title: 'Breeding',
+  //     url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
+  //   },
+  //   {
+  //     id: 6,
+  //     title: 'Upgrade',
+  //     url: 'https://canary.contestimg.wish.com/api/webimage/5e7eef85c35d4d3dc066b8a4-large.jpg?cache_buster=67d85324ce6ed70199f9d0226ab3df04',
+  //   },
+  // ];
+  const data = gamePlayModel;
 
   if (!data) {
     return {

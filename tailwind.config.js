@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         body: ['Saira'],
       },
+      zIndex: {
+        '-1': '-1',
+      },
     },
   },
   variants: {

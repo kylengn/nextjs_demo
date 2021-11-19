@@ -5,10 +5,6 @@ import tokenMap from '../public/assets/token-map.png';
 import gamePlay from '../public/assets/1-03.png';
 
 function GamePlay({ data }) {
-  // const users = props.users;
-
-  // console.log('debug1');
-  // console.log(users);
   return (
     <div
       style={{
@@ -25,10 +21,10 @@ function GamePlay({ data }) {
         height: '200vh',
       }}
     >
-      <h1 className='uppercase text-center text-2xl lg:text-4xl xl:text-5xl my-8 font-bold'>
+      <h1 className='uppercase text-secondary-100 text-center text-2xl lg:text-4xl xl:text-5xl my-8 font-bold'>
         Game Play
       </h1>
-      <div className='grid grid-cols-3 gap-2 lg:gap-6 lg:mx-52 md:mx-12 mx-8'>
+      <div className='grid grid-cols-3 mx-8 md:mx-12 xl:mx-96 gap-2 lg:gap-4'>
         {!data ? (
           <h1>Loading...</h1>
         ) : (
@@ -46,7 +42,7 @@ function GamePlay({ data }) {
 
       {/* DINO TOKEN */}
       <div>
-        <h1 className='uppercase text-center text-2xl lg:text-4xl xl:text-5xl my-8 font-bold'>
+        <h1 className='uppercase text-secondary-100 text-center text-2xl lg:text-4xl xl:text-5xl my-8 font-bold'>
           Dino Token
         </h1>
         <div className='lg:mx-64'>
@@ -58,5 +54,3 @@ function GamePlay({ data }) {
 }
 
 export default GamePlay;
-
-// width={768} height={128}

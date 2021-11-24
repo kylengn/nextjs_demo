@@ -21,7 +21,7 @@ export default function Home({ data, nft, staffs }) {
         <GamePlay data={data} />
         <Nft nft={nft} />
         <Team staffs={staffs} />
-        <Script>
+        <Script id="my-script">
           {`const sideMenu = document.querySelector('#menu');
             const sideBar = document.querySelector('#sidebar');
 

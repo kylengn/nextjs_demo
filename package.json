@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev && tailwindcss build styles/index.css -o styles/globals.css",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "build-css": "tailwindcss build styles/index.css -o styles/globals.css"

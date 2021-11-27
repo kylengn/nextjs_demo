@@ -45,24 +45,6 @@ const Navbar = () => {
         <div className=''>
           <div></div>
 
-          <button className='p-4' id='menu'>
-            <svg
-              className='w-8 h-8 text-secondary-200'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M4 6h16M4 12h16M4 18h16'
-              ></path>
-            </svg>
-          </button>
-
-
           <div className='mobile-menu-button cursor-pointer mt-4 mr-2'>
             <Image src={Menu} alt='menu' onClick={handleToggle} />
           </div>

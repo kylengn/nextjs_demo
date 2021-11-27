@@ -5,7 +5,6 @@ import GamePlay from '../components/GamePlay';
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/Layout';
-import Script from 'next/script';
 import Nft from '../components/Nft';
 import Team from '../components/Team';
 

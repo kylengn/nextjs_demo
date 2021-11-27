@@ -1,10 +1,18 @@
 /* eslint-disable @next/next/link-passhref */
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../public/logo.png';
+import Logo from '../public/assets/logo.png';
+import Menu from '../public/assets/menu.png';
+import PlayBtn from '../public/assets/playbtn.png';
+import MenuBar from '../public/assets/top-bar@3x.png';
 
 const Navbar = () => {
+  const [isActive, setActive] = useState(false);
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
   return (
     // Navigation bar here
     <>
@@ -25,39 +33,26 @@ const Navbar = () => {
           </Link>
 
           <Link href='/play'>
-            <button className='btn p-2 text-primary border-primary border-2 hover:bg-primary hover:text-white transform hover:scale-125 transition ease-in-out duration-500 ml-2'>
-              Play Now
-            </button>
+            <div className='transform hover:scale-125 transition ease-in-out duration-500 ml-2'>
+              <Image src={PlayBtn} alt='play' />
+            </div>
           </Link>
         </div>
       </nav>
 
       {/* nav here */}
       <div className='flex justify-end min-h-screen md:hidden'>
-        {/* mobile menu */}
         <div className=''>
           <div></div>
-          <button className='p-4' id='menu'>
-            <svg
-              className='w-8 h-8 text-secondary-200'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M4 6h16M4 12h16M4 18h16'
-              ></path>
-            </svg>
-          </button>
+          <div className='mobile-menu-button cursor-pointer mt-4 mr-2'>
+            <Image src={Menu} alt='menu' onClick={handleToggle} />
+          </div>
         </div>
 
-        {/* sidebar */}
         <div
-          className='bg-green-600 text-secondary-100 w-64 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out'
+          className={`bg-green-600 text-secondary-100 w-64 py-7 px-2 absolute inset-y-0 left-0 transform ${
+            isActive ? '-translate-x-full' : null
+          } transition duration-200 ease-in-out`}
           id='sidebar'
         >
           <div className='flex justify-center my-6'>
@@ -77,9 +72,9 @@ const Navbar = () => {
             </Link>
 
             <Link href='/play'>
-              <button className='btn block p-2 w-32 mx-auto my-8 text-primary border-primary border-2 hover:bg-primary hover:text-white transform hover:scale-125 transition ease-in-out duration-500 text-center'>
-                Play Now
-              </button>
+              <div className='transform hover:scale-125 transition ease-in-out duration-500 ml-8'>
+                <Image src={PlayBtn} alt='play' />
+              </div>
             </Link>
           </nav>
         </div>

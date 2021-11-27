@@ -21,22 +21,12 @@ export default function Home({ data, nft, staffs }) {
         <GamePlay data={data} />
         <Nft nft={nft} />
         <Team staffs={staffs} />
-        <Script>
-          {`const sideMenu = document.querySelector('#menu');
-            const sideBar = document.querySelector('#sidebar');
-
-            menu.addEventListener('click', () => {
-              sideBar.classList.toggle('-translate-x-full');
-            });
-          `}
-        </Script>
       </Layout>
     </>
   );
 }
 
 export async function getStaticProps() {
-  // console.log(context);
   const data = await getData();
   const nft = await getNft();
   const staffs = await getStaffs();

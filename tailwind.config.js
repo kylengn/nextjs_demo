@@ -1,6 +1,9 @@
 module.exports = {
+<<<<<<< HEAD
   mode: 'jit',
   purge: [],
+=======
+>>>>>>> 824d99b3ba7957c88a96dc72ebafe37a68df8add
   purge: {
     enabled: true,
   },

@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className='flex justify-end min-h-screen md:hidden'>
         <div className=''>
           <div></div>
-<<<<<<< HEAD
+
           <button className='p-4' id='menu'>
             <svg
               className='w-8 h-8 text-secondary-200'
@@ -61,11 +61,10 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
-=======
+
           <div className='mobile-menu-button cursor-pointer mt-4 mr-2'>
             <Image src={Menu} alt='menu' onClick={handleToggle} />
           </div>
->>>>>>> khoi
         </div>
 
         <div

@@ -62,6 +62,7 @@ const Navbar = () => {
             </svg>
           </button>
 
+
           <div className='mobile-menu-button cursor-pointer mt-4 mr-2'>
             <Image src={Menu} alt='menu' onClick={handleToggle} />
           </div>

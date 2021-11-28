@@ -6,6 +6,7 @@ import Logo from '../public/assets/logo.png';
 import Menu from '../public/assets/menu.png';
 import PlayBtn from '../public/assets/playbtn.png';
 import MenuBar from '../public/assets/top-bar@3x.png';
+import Header from '../styles/Header.module.css';
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false);
@@ -16,27 +17,21 @@ const Navbar = () => {
   return (
     // Navigation bar here
     <>
-      <nav>
-        <div className='mt-6 justify-around items-center hidden md:flex'>
-          <Image src={Logo} width={64} height={64} alt='logo' />
-
+      <nav className='flex items-center w-screen'>
+        <div
+          className={`mt-2 space-y-24 items-center hidden md:flex ${Header.navBar} transform lg:scale-75 md:scale-50 justify-around`}
+        >
           <Link href='https://bscscan.com/token/0x04260673729c5f2b9894a467736f3d85f8d34fc8'>
-            <a className='btn p-2 bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300'>
-              Contract Address
-            </a>
+            <a className=''>Contract Address</a>
           </Link>
 
           <Link href='https://whitepaper.cryptoplanes.me/'>
-            <a className='btn p-2 bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300'>
-              Whitepaper
-            </a>
+            <a className=''>Whitepaper</a>
           </Link>
 
-          <Link href='/play'>
-            <div className='transform hover:scale-125 transition ease-in-out duration-500 ml-2'>
-              <Image src={PlayBtn} alt='play' />
-            </div>
-          </Link>
+          <div className=''>
+            <Image src={Menu} alt='menu' onClick={handleToggle} />
+          </div>
         </div>
       </nav>
 

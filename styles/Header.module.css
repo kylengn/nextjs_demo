@@ -11,3 +11,13 @@
   z-index: -1;
   height: 90vh;
 }
+
+.navBar {
+  background-image: url('../public/assets/top-bar@3x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100vw;
+  height: auto;
+  object-fit: contain;
+}

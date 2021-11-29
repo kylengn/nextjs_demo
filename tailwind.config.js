@@ -1,5 +1,7 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -12,6 +14,9 @@ module.exports = {
       },
       fontFamily: {
         body: ['Saira'],
+      },
+      zIndex: {
+        '-1': '-1',
       },
     },
   },

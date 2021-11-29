@@ -5,11 +5,11 @@ import GamePlay from '../components/GamePlay';
 import Header from '../components/Header';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/Layout';
-import Script from 'next/script';
 import Nft from '../components/Nft';
 import gamePlayModel from '../database/gamePlay';
+import Team from '../components/Team';
 
-export default function Home({ data, nft }) {
+export default function Home({ data, nft, staffs }) {
   return (
     <>
       <Head>
@@ -20,28 +20,21 @@ export default function Home({ data, nft }) {
         <Header />
         <GamePlay data={data} />
         <Nft nft={nft} />
-        <Script>
-          {`const sideMenu = document.querySelector('#menu');
-            const sideBar = document.querySelector('#sidebar');
-
-            menu.addEventListener('click', () => {
-              sideBar.classList.toggle('-translate-x-full');
-            });
-          `}
-        </Script>
+        <Team staffs={staffs} />
       </Layout>
     </>
   );
 }
 
 export async function getStaticProps() {
-  // console.log(context);
   const data = await getData();
   const nft = await getNft();
+  const staffs = await getStaffs();
   return {
     props: {
       data,
       nft,
+      staffs,
     },
   };
 }
@@ -134,4 +127,67 @@ async function getNft() {
     };
   }
   return nft;
+}
+
+async function getStaffs() {
+  // const res = await fetch('https://jsonplaceholder.typicode.com/users');
+  // const users = await res.json();
+
+  const staffs = [
+    {
+      id: 1,
+      name: 'Khai Nguyen',
+      title: 'CEO',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 2,
+      name: 'Long Tran',
+      title: 'CTO',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 3,
+      name: 'Khoi Nguyen',
+      title: 'Developer',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 4,
+      name: 'Hanh Tran',
+      title: 'Developer',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 5,
+      name: 'Si Nguyen',
+      title: 'Product Manager',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 6,
+      name: 'Duc Huynh',
+      title: 'UX/UI Desginer',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 7,
+      name: 'Dung Pham',
+      title: 'Marketing Specialist',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+    {
+      id: 8,
+      name: 'An Nguyen',
+      title: 'Game Master',
+      url: 'https://res.cloudinary.com/teepublic/image/private/s--_d9rLtWZ--/c_crop,x_10,y_10/c_fit,w_976/c_crop,g_north_west,h_1038,w_1038,x_-31,y_-162/l_upload:v1565806151:production:blanks:vdbwo35fw6qtflw9kezw/fl_layer_apply,g_north_west,x_-142,y_-273/b_rgb:c62b29/c_limit,f_jpg,h_630,q_90,w_630/v1590709172/production/designs/10722390_0.jpg',
+    },
+  ];
+
+  if (!staffs) {
+    return {
+      notFound: true,
+    };
+  }
+  return staffs;
 }
